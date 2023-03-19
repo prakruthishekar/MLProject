@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 
 #sys module in python provides various funtions and varibles that are used to manupulate 
 # different parts of pythin runtime env. It allows operating on the 
@@ -13,7 +13,7 @@ def error_message_detail(error,error_detail:sys):
     return error_message
 
 class CustomException(Exception):
-    def __init__(self, error_message, error_detail: sys):
+    def __init__(self, error_message, error_detail:sys):
         super().__init__(error_message)
         self.error_messgae = error_message_detail(error_message,error_detail=error_detail)
 
